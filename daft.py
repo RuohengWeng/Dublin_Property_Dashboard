@@ -2,8 +2,11 @@ from bs4 import BeautifulSoup
 from csv import writer
 import requests, re, datetime
 
-#find the page
-dublin_url = "https://www.daft.ie/property-for-sale/dublin-city"
+# find the page, run every day 10pm
+# add a page for all Properties in Ireland
+# If the total number passes 4500, the price is likely to go down
+# 16,463 in ireland on 7 Mar, 16513 on 13 Mar
+dublin_url = "https://www.daft.ie/property-for-sale/dublin"
 south_house_url = "https://www.daft.ie/property-for-sale/south-co-dublin-dublin?salePrice_to=550000&floorSize_from=95&numBeds_from=3&propertyType=detached-houses&propertyType=semi-detached-houses"
 d16_url = "https://www.daft.ie/property-for-sale/dublin-16-dublin?salePrice_to=550000&floorSize_from=95&numBeds_from=3&propertyType=detached-houses&propertyType=semi-detached-houses&pageSize=20"
 d16_url2 = "https://www.daft.ie/property-for-sale/dublin-16-dublin?salePrice_to=550000&floorSize_from=95&numBeds_from=3&propertyType=detached-houses&propertyType=semi-detached-houses&pageSize=20&from=20"
